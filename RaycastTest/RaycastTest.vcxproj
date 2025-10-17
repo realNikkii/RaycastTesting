@@ -76,7 +76,7 @@
       <SDLCheck>true</SDLCheck>
       <PreprocessorDefinitions>WIN32;_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
-      <AdditionalIncludeDirectories>G:\CodeSSD\c++\SDL-release-3.2.24\include</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>G:\CodeSSD\c++\SDL3-devel-3.2.24-VC\SDL3-3.2.24\include</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
@@ -91,7 +91,7 @@
       <SDLCheck>true</SDLCheck>
       <PreprocessorDefinitions>WIN32;NDEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
-      <AdditionalIncludeDirectories>G:\CodeSSD\c++\SDL-release-3.2.24\include</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>G:\CodeSSD\c++\SDL3-devel-3.2.24-VC\SDL3-3.2.24\include</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
@@ -104,11 +104,13 @@
       <SDLCheck>true</SDLCheck>
       <PreprocessorDefinitions>_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
-      <AdditionalIncludeDirectories>G:\CodeSSD\c++\SDL-release-3.2.24\include</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>G:\CodeSSD\c++\SDL3-devel-3.2.24-VC\SDL3-3.2.24\include</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
       <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalDependencies>$(CoreLibraryDependencies);%(AdditionalDependencies);SDL3.lib</AdditionalDependencies>
+      <AdditionalLibraryDirectories>G:\CodeSSD\c++\SDL3-devel-3.2.24-VC\SDL3-3.2.24\lib\x64</AdditionalLibraryDirectories>
     </Link>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
@@ -119,7 +121,7 @@
       <SDLCheck>true</SDLCheck>
       <PreprocessorDefinitions>NDEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
-      <AdditionalIncludeDirectories>G:\CodeSSD\c++\SDL-release-3.2.24\include</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>G:\CodeSSD\c++\SDL3-devel-3.2.24-VC\SDL3-3.2.24\include</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
@@ -128,15 +130,6 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="Raycast.cpp" />
-  </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\..\..\SDL-release-3.2.24\VisualC\SDL\SDL.vcxproj">
-      <Project>{81ce8daf-ebb2-4761-8e45-b71abcca8c68}</Project>
-    </ProjectReference>
-    <ProjectReference Include="..\..\SDL-release-3.2.24\VisualC\SDL\SDL.vcxproj">
-      <Project>{81ce8daf-ebb2-4761-8e45-b71abcca8c68}</Project>
-      <Name>SDL3</Name>
-    </ProjectReference>
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
